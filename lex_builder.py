@@ -11,7 +11,7 @@ class LexBuilder():
             self.known_words = pickle.load(open(self.path, 'rb'))
         else:
             self.known_words = {}
-        self.known_words = {"":"", "negation": "no", "all": "ko", "present_progressive": "ma", "speak":"lun", "nominal": "do", "verbal": "va", "object": "pe", "reflexive": "sido"}
+            self.known_words = {"":"", "negation": "no", "all": "ko", "present_progressive": "ma", "speak":"lun", "nominal": "do", "verbal": "va", "object": "pe", "reflexive": "sido"}
 
     def translate(self, word):
         if word in self.known_words:
@@ -78,4 +78,3 @@ class LexBuilder():
 lex = LexBuilder()
 lex.translate_list_of_words(input("put in a string of many words to translate: "))
 lex.dump_dictionary()
-            
